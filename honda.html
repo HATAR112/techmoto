@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Motorcycles | TechMOTO</title>
+    <style>
+        :root {
+            --primary-red: #e30613;
+            --primary-blue: #003366;
+            --dark-bg: #222327;
+            --light-text: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --bg-color: #222327;
+            --text-color: #fff;
+            --main-color: #ff0000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+        
+        .back-btn {
+            background: var(--main-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .back-btn i {
+            margin-right: 8px;
+        }
+        
+        .motorcycle-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: : 40px;
+            margin-top: 40px;
+        }
+        
+        .bike-image {
+            position: relative;
+        }
+        
+        .bike-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .image-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .specs {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .specs h2 {
+            color: var(--main-color);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .spec-item {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+        
+        .spec-name {
+            color: #aaa;
+        }
+        
+        .spec-value {
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 28px;
+            margin: 30px 0;
+            color: var(--primary-red);
+        }
+        
+        .btn-group {
+            display: flex;
+            grid-gap: 15px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary-red);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #c00511;
+        }
+        
+        .btn-outline {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(0,51,102,0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .motorcycle-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" 
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">TechMOTO<i class="ph-fill ph-motorcycle"></i></div>
+            <a href="motor.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>Back to MotorCycle
+            </a>
+        </header>
+        
+        <main>
+            <div class="motorcycle-showcase">
+                <div class="bike-images">
+                    <div class="bike-image">
+                        <span class="image-label">Stock Version</span>
+                        <img src="https://static.wixstatic.com/media/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg" alt="Yamaha MT-07">
+                    </div>
+                    <div class="bike-image" style="margin-top: 30px;">
+                        <span class="image-label">Modified Version</span>
+                        <img src="https://yamaha.aspacindo.com/wp-content/uploads/2024/11/Snapinsta.app_26869965_144728319658651_8665401810250366976_n_1080-1-1024x770.jpg" alt="Modified Yamaha XSR-155">
+                    </div>
+                </div>
+                
+                <div class="specs">
+                    <h2>Yamaha XSR-155</h2>
+                    
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">689cc Liquid-cooled, 4-stroke, DOHC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Power</span>
+                        <span class="spec-value">74 HP @ 9,000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Torque</span>
+                        <span class="spec-value">68 Nm @ 6,500 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Transmission</span>
+                        <span class="spec-value">6-speed</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Seat Height</span>
+                        <span class="spec-value">805 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-value">184 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">14 L</span>
+                    </div>
+                    
+                    <div class="price">$7,999</div>
+                    
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save for Later
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main>
+            <div class="motorcycle-showcase">
+                <div class="bike-images">
+                    <div class="bike-image">
+                        <span class="image-label">Stock Version</span>
+                        <img src="https://awsimages.detik.net.id/community/media/visual/2023/10/06/yamaha-mt-07.jpeg?w=600&q=90" alt="Yamaha MT-07">
+                    </div>
+                    <div class="bike-image" style="margin-top: 30px;">
+                        <span class="image-label">Modified Version</span>
+                        <img src="https://i0.wp.com/cdn.juraganwp.com/monkeymotoblog/wp-content/uploads/2018/11/11234451/yamaha-mt-07-hageman.jpg?resize=1250%2C834&ssl=1" alt="Modified Yamaha MT-07">
+                    </div>
+                </div>
+                
+                <div class="specs">
+                    <h2>Yamaha MT-07</h2>
+                    
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">689cc Liquid-cooled, 4-stroke, DOHC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Power</span>
+                        <span class="spec-value">74 HP @ 9,000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Torque</span>
+                        <span class="spec-value">68 Nm @ 6,500 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Transmission</span>
+                        <span class="spec-value">6-speed</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Seat Height</span>
+                        <span class="spec-value">805 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-value">184 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">14 L</span>
+                    </div>
+                    
+                    <div class="price">$7,999</div>
+                    
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save for Later
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main>
+            <div class="motorcycle-showcase">
+                <div class="bike-images">
+                    <div class="bike-image">
+                        <span class="image-label">Stock Version</span>
+                        <img src="https://static.wixstatic.com/media/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg" alt="Yamaha MT-07">
+                    </div>
+                    <div class="bike-image" style="margin-top: 30px;">
+                        <span class="image-label">Modified Version</span>
+                        <img src="https://yamaha.aspacindo.com/wp-content/uploads/2024/11/Snapinsta.app_26869965_144728319658651_8665401810250366976_n_1080-1-1024x770.jpg" alt="Modified Yamaha XSR-155">
+                    </div>
+                </div>
+                
+                <div class="specs">
+                    <h2>Yamaha XSR-155</h2>
+                    
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">689cc Liquid-cooled, 4-stroke, DOHC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Power</span>
+                        <span class="spec-value">74 HP @ 9,000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Torque</span>
+                        <span class="spec-value">68 Nm @ 6,500 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Transmission</span>
+                        <span class="spec-value">6-speed</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Seat Height</span>
+                        <span class="spec-value">805 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-value">184 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">14 L</span>
+                    </div>
+                    
+                    <div class="price">$7,999</div>
+                    
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save for Later
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main>
+            <div class="motorcycle-showcase">
+                <div class="bike-images">
+                    <div class="bike-image">
+                        <span class="image-label">Stock Version</span>
+                        <img src="https://static.wixstatic.com/media/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg" alt="Yamaha MT-07">
+                    </div>
+                    <div class="bike-image" style="margin-top: 30px;">
+                        <span class="image-label">Modified Version</span>
+                        <img src="https://yamaha.aspacindo.com/wp-content/uploads/2024/11/Snapinsta.app_26869965_144728319658651_8665401810250366976_n_1080-1-1024x770.jpg" alt="Modified Yamaha XSR-155">
+                    </div>
+                </div>
+                
+                <div class="specs">
+                    <h2>Yamaha XSR-155</h2>
+                    
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">689cc Liquid-cooled, 4-stroke, DOHC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Power</span>
+                        <span class="spec-value">74 HP @ 9,000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Torque</span>
+                        <span class="spec-value">68 Nm @ 6,500 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Transmission</span>
+                        <span class="spec-value">6-speed</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Seat Height</span>
+                        <span class="spec-value">805 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-value">184 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">14 L</span>
+                    </div>
+                    
+                    <div class="price">$7,999</div>
+                    
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save for Later
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <main>
+            <div class="motorcycle-showcase">
+                <div class="bike-images">
+                    <div class="bike-image">
+                        <span class="image-label">Stock Version</span>
+                        <img src="https://static.wixstatic.com/media/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4c022a_f26da6e3dd684778bc8e365260212a0b~mv2.jpg" alt="Yamaha MT-07">
+                    </div>
+                    <div class="bike-image" style="margin-top: 30px;">
+                        <span class="image-label">Modified Version</span>
+                        <img src="https://yamaha.aspacindo.com/wp-content/uploads/2024/11/Snapinsta.app_26869965_144728319658651_8665401810250366976_n_1080-1-1024x770.jpg" alt="Modified Yamaha XSR-155">
+                    </div>
+                </div>
+                
+                <div class="specs">
+                    <h2>Yamaha XSR-155</h2>
+                    
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">689cc Liquid-cooled, 4-stroke, DOHC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Power</span>
+                        <span class="spec-value">74 HP @ 9,000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Torque</span>
+                        <span class="spec-value">68 Nm @ 6,500 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Transmission</span>
+                        <span class="spec-value">6-speed</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Seat Height</span>
+                        <span class="spec-value">805 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight</span>
+                        <span class="spec-value">184 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">14 L</span>
+                    </div>
+                    
+                    <div class="price">$7,999</div>
+                    
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i> Save for Later
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
