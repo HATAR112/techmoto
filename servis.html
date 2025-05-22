@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechMOTO/service</title>
+    <meta name="description" content="The ultimate hub for motorcycle technology and services">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font & Icon Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+        :root{
+            --bg-color: #222327;
+            --text-color: #fff;
+            --main-color: #ff0000;
+        }
+        body{
+            min-height: 100vh;
+            color: var(--text-color);
+            position: relative;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            padding: 28px 12%;
+            transition: all .50s ease;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo span{
+            color: var(--main-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .logo i{
+            font-size: 23px;
+        }
+        .navbar{
+            display: flex;
+        }
+        .navbar a{
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 5px 0;
+            margin: 0px 30px;
+            transition: all .50s ease;
+        }
+        .navbar a:hover{
+            color: var(--main-color);
+        }
+        .navbar a.active{
+            color: var(--main-color);
+        }
+        .main{
+            display: flex;
+            align-items: center;
+        }
+        .main a{
+            margin-right: 25px;
+            margin-left: 10px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all .50s ease;
+        }
+        .user{
+            display: flex;
+            align-items: center;
+        }
+        .user i{
+            color: var(--main-color);
+            font-size: 20px;
+            margin-right: 7px;
+        }
+        .main a:hover{
+            color: var(--main-color);
+        }
+        #menu-icon{
+            font-size: 35px;
+            color: var(--text-color);
+            cursor: pointer;
+            z-index: 10001;
+            display: none;
+        }
+
+        /* Video Background Styles */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content Styles */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .section-title span {
+            color: var(--main-color);
+        }
+        
+        .section-subtitle {
+            color: #aaa;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--main-color);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-icon i {
+            font-size: 1.8rem;
+            color: var(--main-color);
+        }
+        
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-description {
+            color: #aaa;
+        }
+
+        @media (max-width: 1280px){
+            header{
+                padding: 14px 2%;
+                transition: .2s;
+            }
+            .navbar a{
+                padding: 5px 0; 
+                margin: 0px 20px;
+            }
+        }
+
+        @media (max-width: 1090px){
+            #menu-icon{
+                display: block;
+            }
+            .navbar{
+                position: absolute;
+                top: 100%;
+                right: -1000%;
+                width: 270px;
+                height: auto;
+                background: black;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                border-radius: 10px;
+                transition: all .50s ease;
+            }
+            .navbar a{
+                display: block;
+                margin: 9px 0;
+                padding: 0px 25px;
+                transition: all .50s ease;
+            }
+            .navbar a:hover{
+                color: var(--text-color);
+                transform: translateY(5px); 
+            }
+            .navbar a.active{
+                color: var(--text-color);
+            }
+            .navbar.open{
+                right: 2%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="harleyd.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <header>
+            <a href="home.html" class="logo"><span>TechMOTO<i class="ph-fill ph-motorcycle"></i></span></a>
+            <nav>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="motor.html">Motorcycle <i class="ri-search-line"></i></a></li>
+                <li><a href="servis.html" class="active">Service</a></li>
+                <li><a href="job.html">Job Posting</a></li>
+            </ul>
+            </nav>
+            <div class="main">
+                <a href="kontak.html"><i class="ri-user-fill"></i> Contact</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Our <span>Services</span></h2>
+                <p class="section-subtitle">Comprehensive solutions for all your motorcycle needs</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="ph-fill ph-wrench"></i>
+                        </div>
+                        <h3 class="service-title">Diagnostics</h3>
+                        <p class="service-description">Advanced electronic diagnostics for all modern motorcycle systems.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="ph-fill ph-gear"></i>
+                        </div>
+                        <h3 class="service-title">Performance Tuning</h3>
+                        <p class="service-description">Unlock your bike's full potential with our tuning services.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="ph-fill ph-lightning"></i>
+                        </div>
+                        <h3 class="service-title">Electrical Systems</h3>
+                        <p class="service-description">Complete electrical system services and upgrades.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="ph-fill ph-shield"></i>
+                        </div>
+                        <h3 class="service-title">Safety Upgrades</h3>
+                        <p class="service-description">Enhance your riding safety with our technology solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

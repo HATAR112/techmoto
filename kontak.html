@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kontak</title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechMOTO/home/kontak</title>
+    <meta name="description" content="The ultimate hub for motorcycle technology and services">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font & Icon Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+    	*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #ff0000;
+}
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    background-color: #363636;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo span{
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.logo i{
+    font-size: 23px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0; 
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -1000%;
+        width: 270px;
+        height: auto;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 9px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(5px); 
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+}
+.banner video{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(100%);
+}
+    </style>
+</head>
+<body>
+	<header>
+        <a href="home.html" class="logo"><span>TechMOTO<i class="ph-fill ph-motorcycle"></i></span></a>
+        <nav>
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="motor.html">Motorcycle <i class="ri-search-line"></i></a></li>
+            <li><a href="servis.html">Service</a></li>
+            <li><a href="job.html">Job Posting</a></li>
+        </ul>
+        </nav>
+        <div class="main">
+            <a href="kontak.html" style="color: var(--main-color)"><i class="ri-user-fill"></i> Contact</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your <span>Motorcycle</span></h2>
+            <p class="section-subtitle">Contact us for get your own motorcycle or come here and customize your motorcycle!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="ri-phone-line"></i>
+                        <span>+62 123-4567-8910</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-mail-line"></i>
+                        <span>techmoto@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Jl. Margonda Raya No 438, Kota Depok, Jawa Barat 16424</span>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+             <div class="banner">
+        <video autoplay loop muted>
+            <source src="harleyd.mp4" type="video/mp4">
+        </video>
+    </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span>TechMOTO<i class="ph-fill ph-motorcycle"></i></span>
+                    </a>
+                    <p>Innovating motorcycle technology for the future.</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61575974284662"><i class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/tech.moto00/?utm_source=ig_web_button_share_sheet"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechMOTO. Website by XI-TKJ-D.</p>
+            </div>
+        </div>
+    </footer>
+
+     <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
