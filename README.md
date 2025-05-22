@@ -1,2 +1,1 @@
-# techmoto
-buat pengembangan diri mas
+index.html
